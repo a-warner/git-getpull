@@ -1,9 +1,6 @@
 #!/bin/sh
 
-if [ -z "$1" ]; then
-  echo "Usage: git getpull <SHA>"
-  exit 1
-elif [ -z "$(git rev-parse --git-dir 2>/dev/null)" ]; then
+if [ -z "$(git rev-parse --git-dir 2>/dev/null)" ]; then
   echo "Not in a git directory"
   exit 1
 else
